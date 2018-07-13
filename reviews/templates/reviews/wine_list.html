@@ -1,0 +1,15 @@
+{% extends 'reviews/base.html' %}
+{% block title %}
+    <h2>Wine List</h2>
+{% endblock %}
+{% block content %}
+{% if wine_list %}
+<div>
+    {% for wine in wine_list %}
+        <div>
+            <a href ="{% url 'reviews:wine_detail' wine.id %}">{{wine.name}}</a>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

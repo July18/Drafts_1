@@ -1,0 +1,13 @@
+{% extends 'reviews/base.html' %}
+{% block title %}
+    <h2>Review Detail</h2>
+{% endblock %}
+{% block content %}
+    <div>
+        <p>Wine name: {{review.wine}}</p>
+        <p>Rating: {{review.rating}}</p>
+        <p>Comment: {{review.comment}}</p>
+    </div>
+{% endblock %}
+
+
